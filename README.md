@@ -1,5 +1,3 @@
-# Guess-the-number-Game
-its a game to guess the assigned number, very interesting game 
 # Exercise to make a guess game given by Harry from Code with Harry youtube channel
 # Coder - Praveen Singh Chauhan
 
@@ -10,6 +8,7 @@ left_chance = 0
 total_chance = 9
 
 while True:
+
     if guess_count == 9:
         print("*" * 45)
         print("SO Sorry.. Your have exhaust all your chances ")
@@ -35,7 +34,7 @@ while True:
             guess_count += 2
             print("*" * 25)
             print("HINT = number has two digit and smaller to 25 ")
-        elif len(mob_num) < 10:
+        elif len(mob_num) < 10 and guess_count == 3:
             print("*" * 70)
             print(f"You Missed the Chance to get a hint, \n"
                   f"Its not a 10 digit mmobile number {guess_number} . its only {len(mob_num)} digit long ")
