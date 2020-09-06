@@ -1,5 +1,6 @@
 # Problem given by Harry from Code with Harry Youtube Channel (HarisAK)
-# Coder - Praveen Singh Chauhan (Technology Video Network - Youtube Channel , GAMP Aaryawarti Films - Film Production & Youtube Channel)
+# Coder - Praveen Singh Chauhan (Technology Video Network - Youtube Channel ,
+# GAMP Aaryawarti Films - Film Production & Youtube Channel)
 # Link of Youtube - https://www.youtube.com/TechnologyVideoNetwork , https://www.youtube.com/gampaaryawartifilms
 # Facebook - https://www.facebook.com/praveen13c
 # Twitter - https://twitter.com/praveen13c , https://twitter.com/tvnutube
@@ -27,13 +28,21 @@ while True:
     print("  GUESS THE RIGHT NUMBER - G A M E ")
     print(f"    You have ( {left_chance} ) chances left ")
     print("<>", "=" * 30, "<>")
-    guess_number = int(input("Enter Your Number > "))
-    mob_num = str(guess_number)
+    guess_number = input("Enter Your Number > ")
 
-    if guess_number < the_number:
+    mob_num = str(guess_number)
+    try:
+        guess_number == int(guess_number)
+    except Exception as err_num01:
+        guess_count += 1
+        print(f" Please enter a 'Numeric' Value , you entered ' {guess_number} ' ")
+        print("Error : ", err_num01, "\n")
+        continue
+
+    if int(guess_number) < the_number:
         guess_count += 1
         print(f"Your given number {guess_number} is 'Smaller'...\n")
-    elif guess_number > the_number:
+    elif int(guess_number) > the_number:
         mob_num = str(guess_number)
 
         if len(mob_num) == 10 and guess_count == 3:
@@ -54,7 +63,7 @@ while True:
                 guess_count += 1
         else:
 
-            if len(mob_num) <= 10 and  len(mob_num) >= 3:
+            if len(mob_num) <= 10 and len(mob_num) >= 3:
                 guess_count += 1
                 print("*" * 25)
                 print("Message  = Number you entered is too big.. \n")
