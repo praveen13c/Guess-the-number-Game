@@ -70,9 +70,11 @@ while True:
             else:
                 guess_count += 1
                 print(f"Your given number {guess_number} is 'Bigger'....\n")
-    elif guess_number == the_number:
+    elif int(guess_number) == the_number:
         print(f"Congratulations .... you guessed right, '[ {guess_number} ]' ")
         break
-    else:
-        print("errrrrooorrr ")
+    elif int(guess_number) == the_number:
+         print(f"Congratulations .... you guessed right, '[ {guess_number} ]' ")
+         break
+
 # End of the Program
