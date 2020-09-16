@@ -1,4 +1,5 @@
-Guess the Number GAME
+# Guess the Number GAME
+
 Brief = its simple game , you have to guess a number which is fixed or we can give to guess 
 
 Exercise given by Harry from Code with Harry Youtube Channel (HarisAK)\n
